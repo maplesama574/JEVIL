@@ -1,0 +1,166 @@
+body {
+    font-family: "Zen Maru Gothic", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(61, 54, 77, 0.9);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+/*ヘッダー*/
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(61, 54, 77, 0.9);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10;
+}
+.header-nav{
+    color: aliceblue;
+    text-decoration: none;
+}
+.header-wrapper>a.header-nav {
+    margin-right: 300px;
+}
+.header-wrapper__nav {
+    display: flex;
+    gap: 30px;
+}
+
+/*内容*/
+.content {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+        url("../images/okumono_winter2532.png");
+    background-size: cover;
+    background-position: top center;
+    margin-top: 80px;
+    padding: 50px 0;
+}
+
+.greeting {
+    text-align: center;
+    color: aliceblue;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.greeting h1 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.greeting-content {
+    white-space: pre-line;
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+
+.introduction h2 {
+    text-align: center;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
+
+.character img {
+    width: 30vh;
+    cursor: pointer;
+    padding-top: 20px;
+}
+
+/* モーダル */
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 20;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    position: absolute;
+    width: 300px;
+    max-width: 80%;
+    background-color: rgba(240, 248, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(69, 62, 84, 0.4);
+    padding: 20px;
+    transition: right 0.4s ease;
+    opacity: 0.7;
+}
+
+.modal-content__jevil {
+    top: 59%;
+    right: -100%;
+    transform: translateY(-50%);
+}
+
+.modal-content__maple {
+    top: 83%;
+    right: -100%;
+    transform: translateY(-50%);
+}
+
+.modal-overlay.show .modal-content__jevil,
+.modal-overlay.show .modal-content__maple {
+    right: 8%;
+    opacity: 1;
+}
+
+.modal-content p {
+    margin: 5px 0;
+    line-height: 1;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #453e54;
+}
+
+.modal-detail {
+    white-space: pre-line;
+}
+
+.modal-detail--red {
+    color: #bd0900;
+}
