@@ -26,3 +26,5 @@ Route::get('/memory', [JevilController::class, 'log'])->name('log');
 Route::get('/about', [JevilController::class, 'about'])->name('about');
 
 Route::get('/lock', [JevilController::class, 'hidden'])->name('hidden');
+
+Route::get('/log/update', [JevilController::class, 'update'])->name('update');

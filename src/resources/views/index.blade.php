@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top Page</title>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+@extends('app')
+@section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-</head>
+@endsection
 
-<body>
-<header class="header-wrapper">
-    <a class="header-nav" href="{{ route('index') }}">Top Page</a>
-    <div class="header-wrapper__nav">
-        <a class="header-nav" href="{{route('about')}}">About</a>
-        <a class="header-nav" href="{{route('log')}}">Diary</a>
-        <a class="header-nav" href="{{route('hidden')}}">Lock Diary</a>
-    </div>
-</header>
-
-<main class="content">
+@section('content')
     <div class="greeting">
         <h1>🃏🍁</h1>
         <p class="greeting-content">
@@ -56,6 +41,19 @@
     </div>
 </div>
 
+<div class="next-menu">
+    <a class="next-nav" href="{{route('about')}}">
+        <img class="next-icon" src="{{asset('images/IMG_2005.PNG')}}" alt="about">
+    </a>
+    <a class="next-nav" href="{{route('log')}}">
+        <img class="next-icon" src="{{asset('images/IMG_2004.PNG')}}" alt="log">
+    </a>
+    <a class="next-nav" href="{{route('hidden')}}">
+        <img class="next-icon" src="{{asset('images/IMG_2003.PNG')}}" alt="hidden">
+    </a>
+</div>
+
+
 
 </main>
 
@@ -76,5 +74,4 @@ document.querySelectorAll('.character img').forEach(img => {
 
 </script>
 
-</body>
-</html>
+@endsection
